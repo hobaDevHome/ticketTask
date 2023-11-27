@@ -1,0 +1,33 @@
+<main class="main">
+  <div class="content">
+    <!-- ///////////// header //////////// -->
+    <div class="header">
+      <div class="edit-button">
+        <span>تعديل</span>
+        <div class="edit-icon"><img src="/assets/edit.png" alt="edit" /></div>
+      </div>
+
+      <div class="ticket_container">
+        <div class="ticket_number">تذكرة رقم #2342</div>
+        <div class="back_arrow">
+          <i class="pi pi-arrow-right" style="font-size: 12px"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- //////////// chart div /////////////// -->
+    <div class="chart-ticket-container">
+      <div class="ticket-container">ticket</div>
+      <div class="chart-container">
+        <div class="card">
+          <app-chart2 />
+        </div>
+      </div>
+    </div>
+    <!-- <div>
+      <canvasjs-chart [options]="chartOptions"></canvasjs-chart>
+    </div> -->
+  </div>
+</main>
+
+<router-outlet></router-outlet>

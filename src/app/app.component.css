@@ -1,0 +1,111 @@
+:host {
+  --purple: #8a74f9;
+  --gray-border: #e9eaea;
+  --main-bg: #f3f5f7;
+  --button-bg: #f9f9f9;
+  --gray-med: #e7eaed;
+}
+
+main {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: inherit;
+  position: relative;
+
+  background-color: var(--main-bg);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 3rem;
+}
+
+/* header  */
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+.edit-button {
+  display: flex;
+  align-items: center;
+
+  width: 78px;
+  height: 34px;
+  justify-content: center;
+  border: 1px var(--gray-border) solid;
+  border-radius: 5px;
+  background-color: var(--button-bg);
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  font-family: "NeoReg";
+}
+.edit-button:hover {
+  transform: scale(1.1);
+}
+.edit-icon {
+  padding-left: 7px;
+  margin-top: 5px;
+}
+.ticket_container {
+  display: flex;
+  align-items: center;
+}
+.ticket_number {
+  font-family: "NeoMed";
+  font-size: 16px;
+}
+.back_arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--gray-med);
+  border-radius: 8px;
+  margin-left: 10px;
+  width: 32px;
+  height: 32px;
+}
+
+/* ///////// chart and ticket pic////////// */
+
+.chart-ticket-container {
+  display: flex;
+  gap: 24px;
+}
+
+.ticket-container {
+  display: flex;
+  flex: 1;
+  margin: 5px;
+  padding: 5px;
+}
+.chart-container {
+  width: "100%";
+  flex: 2;
+}
+
+@media screen and (max-width: 650px) {
+  .content {
+    flex-direction: column;
+    width: max-content;
+  }
+
+  .divider {
+    height: 1px;
+    width: 100%;
+    background: var(--red-to-pink-to-purple-horizontal-gradient);
+    margin-block: 1.5rem;
+  }
+}
