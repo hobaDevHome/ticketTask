@@ -92,10 +92,53 @@ main {
   padding: 5px;
 }
 .chart-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
   width: "100%";
   flex: 2;
+  padding: 10px;
+  border-radius: 5px;
 }
-
+.stats-div {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.stats-title {
+  margin-right: 12px;
+}
+:host ::ng-deep .p-dropdown {
+  height: 30px;
+  direction: rtl;
+  justify-content: center;
+  align-items: center;
+}
+:host ::ng-deep .p-dropdown-label {
+  font-family: "NeoReg";
+  font-size: 12px;
+}
+:host ::ng-deep .p-dropdown-items {
+  font-family: "NeoReg";
+  font-size: 12px;
+}
+:host ::ng-deep .p-dropdown-trigger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+:host ::ng-deep .p-dropdown-trigger-icon {
+  width: 10px;
+}
+.stats-text {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-family: "NeoMed";
+  font-size: 12px;
+}
 @media screen and (max-width: 650px) {
   .content {
     flex-direction: column;
