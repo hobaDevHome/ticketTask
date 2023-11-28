@@ -35,7 +35,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 10px;
+  margin-bottom: 20px;
 }
 .edit-button {
   display: flex;
@@ -93,8 +93,8 @@ main {
 .ticket-container {
   display: flex;
   flex: 1;
-  margin: 5px;
-  padding: 5px;
+  margin: 0;
+  padding: 0;
 }
 .chart-container {
   background-color: #fff;
@@ -157,4 +157,10 @@ main {
     background: var(--red-to-pink-to-purple-horizontal-gradient);
     margin-block: 1.5rem;
   }
+}
+.drop1 {
+  font-family: "NeoMed";
+}
+.sales-header-container {
+  margin-top: 15px;
 }
