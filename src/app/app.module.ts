@@ -14,6 +14,10 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { DropdownComponent2 } from './dropdown2/dropdown2.component';
 import { TicketComponent } from './ticket/ticket.component';
 import { TooltipModule } from 'primeng/tooltip';
+import { SalesheaderComponent } from './salesheader/salesheader.component';
+import { InputSwitchModule } from 'primeng/inputswitch';
+import { InputTextModule } from 'primeng/inputtext';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,7 @@ import { TooltipModule } from 'primeng/tooltip';
     DropdownComponent,
     DropdownComponent2,
     TicketComponent,
+    SalesheaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +37,9 @@ import { TooltipModule } from 'primeng/tooltip';
     ChartModule,
     DropdownModule,
     TooltipModule,
+    InputSwitchModule,
+    InputTextModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

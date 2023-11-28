@@ -22,7 +22,9 @@
       </div>
       <div class="chart-container">
         <div class="stats-div">
-          <div class="time-filter"><app-dropdown /></div>
+          <div class="time-filter drop1">
+            <app-dropdown />
+          </div>
           <div class="stats-text">
             <p class="stats-title">إحصائيات استخدام القسيمة</p>
             <app-dropdown2 />
@@ -32,6 +34,11 @@
           <app-chart2 />
         </div>
       </div>
+    </div>
+
+    <!-- //////////// table header ////////// -->
+    <div class="sales-header-container">
+      <app-salesheader />
     </div>
     <!-- <div>
       <canvasjs-chart [options]="chartOptions"></canvasjs-chart>
