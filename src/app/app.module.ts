@@ -12,6 +12,8 @@ import { ChartModule } from 'primeng/chart';
 import { DropdownModule } from 'primeng/dropdown';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { DropdownComponent2 } from './dropdown2/dropdown2.component';
+import { TicketComponent } from './ticket/ticket.component';
+import { TooltipModule } from 'primeng/tooltip';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { DropdownComponent2 } from './dropdown2/dropdown2.component';
     Chart2Component,
     DropdownComponent,
     DropdownComponent2,
+    TicketComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,7 @@ import { DropdownComponent2 } from './dropdown2/dropdown2.component';
     CanvasJSAngularChartsModule,
     ChartModule,
     DropdownModule,
+    TooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

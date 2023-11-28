@@ -47,18 +47,18 @@ main {
   border: 1px var(--gray-border) solid;
   border-radius: 5px;
   background-color: var(--button-bg);
-  transition: all 0.3s ease-in;
+  transition: all 0.1s ease-in;
   cursor: pointer;
   font-family: "NeoReg";
 }
 .edit-button:hover {
-  transform: scale(1.1);
+  transform: translate(1px, 3px);
 }
 .edit-icon {
   padding-left: 7px;
   margin-top: 5px;
 }
-.ticket_container {
+.ticket_number_container {
   display: flex;
   align-items: center;
 }
@@ -76,6 +76,11 @@ main {
   margin-left: 10px;
   width: 32px;
   height: 32px;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+.back_arrow:hover {
+  transform: translate(1px, 3px);
 }
 
 /* ///////// chart and ticket pic////////// */
@@ -139,6 +144,7 @@ main {
   font-family: "NeoMed";
   font-size: 12px;
 }
+
 @media screen and (max-width: 650px) {
   .content {
     flex-direction: column;
