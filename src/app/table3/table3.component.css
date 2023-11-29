@@ -1,0 +1,83 @@
+:host ::ng-deep .p-datatable table {
+  /* table-layout: fixed; */
+  direction: rtl;
+  font-family: "NeoReg";
+}
+
+th {
+  text-align: center;
+  font-size: 14px;
+  color: #abaab1;
+  font-weight: normal;
+}
+.user-div {
+  display: flex;
+}
+.user-data {
+  text-align: right;
+  font-size: 11.5px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+}
+
+.mobile {
+  margin-top: 5px;
+  color: #92a1ad;
+}
+
+td {
+  text-align: center;
+  font-size: 14px;
+}
+
+.donwload-div {
+  display: flex;
+  align-items: center;
+}
+
+.ticket-icon-div {
+  width: 32px;
+  height: 32px;
+  background: rgba(138, 116, 249, 0.1);
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-left: 5px;
+}
+.download-flie-div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 10px;
+}
+.ticket-number {
+  font-family: "NeoMed";
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+.file-size {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.avatar-placeholder {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #038cb7;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cinema-td {
+  width: 14rem !important;
+}
+.cinema-text {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}

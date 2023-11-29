@@ -1,0 +1,160 @@
+<div class="card">
+  <p-table
+    #dt
+    [value]="users"
+    [(selection)]="selectedUser"
+    dataKey="id"
+    [rowHover]="true"
+    [rows]="5"
+    [showCurrentPageReport]="true"
+    [rowsPerPageOptions]="[5, 10, 25]"
+    [loading]="loading"
+    [paginator]="true"
+    currentPageReportTemplate="عرض  من أصل {totalRecords} "
+    [filterDelay]="0"
+    [resizableColumns]="false"
+    (onPage)="pageChange($event)"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th style="min-width: 2rem">
+          <div class="flex justify-content-between align-items-center">#</div>
+        </th>
+        <th style="min-width: 10rem">
+          <div class="flex justify-content-between align-items-center">
+            المستخدم
+          </div>
+        </th>
+
+        <th style="min-width: 7rem">
+          <div class="flex justify-content-between align-items-center">
+            رقم التذكرة
+          </div>
+        </th>
+        <th pSortableColumn="price" style="min-width: 10rem">
+          <div class="flex justify-content-between align-items-center">
+            قيمة التذكرة
+            <p-sortIcon field="price"></p-sortIcon>
+          </div>
+        </th>
+        <th style="min-width: 6rem">
+          <div class="flex justify-content-between align-items-center">
+            السينمات
+          </div>
+        </th>
+        <th style="min-width: 7rem">
+          <div class="flex justify-content-between align-items-center">
+            عدد الأشخاص
+          </div>
+        </th>
+        <th style="min-width: 8rem">
+          <div class="flex justify-content-between align-items-center">
+            عدد مرات الشراء
+          </div>
+        </th>
+        <th style="min-width: 12rem">
+          <div class="flex justify-content-between align-items-center">
+            التذكرة
+          </div>
+        </th>
+
+        <th style="width: 5rem"></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-customer>
+      <tr class="p-selectable-row">
+        <td>
+          {{ customer.id }}
+        </td>
+
+        <td>
+          <div class="user-div">
+            <div *ngIf="customer.image !== ''; else placeHolder">
+              <img
+                src="/assets/{{ customer.image }}"
+                [alt]="customer.name"
+                width="32"
+                style="vertical-align: middle"
+              />
+            </div>
+
+            <ng-template #placeHolder>
+              <div class="avatar-placeholder">
+                <span>{{ customer.name.split(" ")[0].slice(0, 1) }}</span>
+                <span>{{ customer.name.split(" ")[1].slice(0, 1) }}</span>
+              </div>
+            </ng-template>
+
+            <div class="user-data">
+              <span class="p-column-title"> {{ customer.name }}</span>
+
+              <span class="p-column-title mobile"> {{ customer.mobile }}</span>
+            </div>
+          </div>
+        </td>
+
+        <td>
+          {{ customer.ticket }}
+        </td>
+
+        <td>
+          <span class="p-column-title">price</span>
+          {{ customer.price | currency : "USD" : "symbol" }}
+        </td>
+        <td>
+          <div *ngIf="customer.cenima.split(',').length < 4; else truncate">
+            {{ customer.cenima }}
+          </div>
+
+          <ng-template #truncate>
+            <div class="cinema-td">
+              <div
+                class="cinema-text"
+                [pTooltip]="customer.cenima.split(',').slice(3).join()"
+                tooltipPosition="top"
+              >
+                {{ customer.cenima }}
+              </div>
+            </div>
+          </ng-template>
+        </td>
+        <td>
+          {{ customer.persons }}
+        </td>
+        <td>
+          <span class="p-column-title">purchaesCount</span>
+          {{ customer.purchaesCount }}
+        </td>
+        <td>
+          <div class="donwload-div">
+            <div class="ticket-icon-div">
+              <img
+                src="/assets/ticket-2.svg"
+                alt="donwload"
+                width="16"
+                style="vertical-align: middle"
+              />
+            </div>
+            <div class="download-flie-div">
+              <span class="ticket-number">تذكرة رقم 45.pdf</span>
+              <span class="file-size">9mb . PDF</span>
+            </div>
+            <div>
+              <img
+                src="/assets/download.svg"
+                alt="donwload"
+                width="16"
+                style="vertical-align: middle"
+              />
+            </div>
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="8">No customers found.</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

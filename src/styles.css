@@ -23,12 +23,11 @@
   background-color: #1e1e1e;
   color: #e5e5ef;
   font-family: "NeoReg";
-  padding: 10px 25px;
 }
-.p-tooltip .p-tooltip-arrow {
+/* .p-tooltip .p-tooltip-arrow {
   border-bottom-color: #1e1e1e;
   width: 10px;
-}
+} */
 .p-tooltip.p-tooltip-bottom .p-tooltip-arrow {
   border-bottom-color: #1e1e1e;
 }
@@ -40,4 +39,16 @@
 }
 .p-tooltip.p-tooltip-top .p-tooltip-arrow {
   border-top-color: #1e1e1e;
+}
+
+:host ::ng-deep .inner_table .ui-paginator {
+  background: red;
+}
+:host
+  ::ng-deep
+  .inner_table
+  .ui-paginator
+  .ui-paginator-pages
+  .ui-paginator-page.ui-state-active {
+  background: red;
 }

@@ -52,6 +52,11 @@
   justify-content: center;
   align-items: center;
   margin-right: 8px;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+}
+.sort-button:hover {
+  transform: scale(1.1);
 }
 .sort-icon {
   font-size: 14px;
@@ -66,4 +71,28 @@
   font-family: "NeoMed";
   font-size: 12px;
   direction: rtl;
+}
+.active {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .sales-header-div {
+    display: flex;
+    flex-direction: column;
+  }
+  .booking-div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .search-div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
 }

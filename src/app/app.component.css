@@ -25,7 +25,7 @@ main {
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1270px;
   margin-bottom: 3rem;
 }
 
@@ -95,6 +95,16 @@ main {
   flex: 1;
   margin: 0;
   padding: 0;
+  background: var(--purple);
+  color: white;
+  font-family: "NeoReg";
+  border-radius: 10px;
+  width: 100%;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  flex-direction: column;
 }
 .chart-container {
   background-color: #fff;
@@ -145,22 +155,35 @@ main {
   font-size: 12px;
 }
 
-@media screen and (max-width: 650px) {
-  .content {
-    flex-direction: column;
-    width: max-content;
-  }
-
-  .divider {
-    height: 1px;
-    width: 100%;
-    background: var(--red-to-pink-to-purple-horizontal-gradient);
-    margin-block: 1.5rem;
-  }
-}
 .drop1 {
   font-family: "NeoMed";
 }
 .sales-header-container {
   margin-top: 15px;
+}
+
+.table-div {
+  margin-top: 20px;
+  background: white;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .chart-ticket-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .stats-div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .ticket-container {
+    flex: 1;
+  }
+  .chart-container {
+    flex: 1;
+  }
 }

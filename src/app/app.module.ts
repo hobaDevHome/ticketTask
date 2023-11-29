@@ -18,6 +18,17 @@ import { SalesheaderComponent } from './salesheader/salesheader.component';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
+import { TagModule } from 'primeng/tag';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+
+import { ProgressBarModule } from 'primeng/progressbar';
+
+import { ToastModule } from 'primeng/toast';
+
+import { Table2Component } from './table2/table2.component';
+import { Table3Component } from './table3/table3.component';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,6 +38,9 @@ import { TableModule } from 'primeng/table';
     DropdownComponent2,
     TicketComponent,
     SalesheaderComponent,
+
+    Table2Component,
+    Table3Component,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +54,11 @@ import { TableModule } from 'primeng/table';
     InputSwitchModule,
     InputTextModule,
     TableModule,
+    HttpClientModule,
+    TagModule,
+    ProgressSpinnerModule,
+    ProgressBarModule,
+    ToastModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
